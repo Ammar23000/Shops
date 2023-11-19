@@ -1,7 +1,3 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
-
 const assert = require('assert');
 
 const MongoClient = require('mongodb').MongoClient;
@@ -10,14 +6,16 @@ const ObjectID = require('mongodb').ObjectID;
 const mongourl = 'mongodb+srv://s1257719:Gujjar123@clusterg.vfsld6c.mongodb.net/?retryWrites=true&w=majority'; 
 const dbName = 'test';
 
-
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
 const session = require('cookie-session');
 const SECRETKEY = 'am123';
 
 var usersinfo = new Array(
-    {name: "user1", password: "am123"},
-    {name: "user2", password: "am123"},
-    {name: "user3", password: "am123"}
+    {name: "userA", password: "am123"},
+    {name: "userB", password: "am123"},
+    {name: "userC", password: "am123"}
 );
 
 var documents = {};
@@ -27,6 +25,7 @@ app.use(session({
     userid: "session",  
     keys: [SECRETKEY],
 }));
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -155,11 +154,11 @@ const handle_Delete = function(res, criteria) {
         deleteDocument(db, deldocument, function(results){
             client.close();
             console.log("Closed DB connection");
-            res.status(200).render('info', {message: "Document is successfully deleted."});
+            res.status(200).render('info', {message: "Shop has been deleted successfully."});
         })     
     });
     //client.close();
-    //res.status(200).render('info', {message: "Document is successfully deleted."});
+    //res.status(200).render('info', {message: "Shop has been deleted successfully."});
 }
 
 app.get('/', function(req, res){
@@ -193,6 +192,7 @@ app.post('/login', function(req, res){
         return res.redirect("/");
 });
 
+
 app.get('/logout', function(req, res){
     req.session = null;
     req.authenticated = false;
@@ -222,7 +222,7 @@ app.post('/search', function(req, res){
         const db = client.db(dbName);
     
     var searchID={};
-    searchID['shopID'] = req.body.restaurantID;
+    searchID['shopID'] = req.body.shopID;
     
     if (searchID.shopID){
     console.log("...Searching the document");
@@ -233,7 +233,7 @@ app.post('/search', function(req, res){
         });
     }
     else{
-    console.log("Invalid Entry - Shop ID is compulsory for searching!");
+    console.log("Invalid Entry - Shop ID is must for searching!");
     res.status(200).redirect('/find');
     }         	
 	});
@@ -279,7 +279,7 @@ app.post('/create', function(req, res){
             createDocument(db, documents, function(docs){
                 client.close();
                 console.log("Closed DB connection");
-                return res.status(200).render('info', {message: "Document is created successfully!"});
+                return res.status(200).render('info', {message: "Shop has been added successfully!"});
             });
         } else{
             client.close();
@@ -320,7 +320,7 @@ app.post('/update', function(req, res){
                 updateDocument(updateDoc, updatedocument, function(docs) {
                     client.close();
                     console.log("Closed DB connection");
-                    return res.render('info', {message: "Document is updated successfully!."});
+                    return res.render('info', {message: "Shop information has been updated successfully!."});
                     
                 })
             }
