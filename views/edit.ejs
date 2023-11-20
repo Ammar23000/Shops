@@ -28,20 +28,19 @@
     <input type="text" id="name" name="name" class="form-control" placeholder="" value= "<% if (item.name) { %><%= item.name %><% } %>" /><br><br>
                 
     <label for="subdistrict"><b>Sub District:</b></label>
-    <input type="text" id="subdistrict" name="sucdistrict" class="form-control" placeholder="" value ="<% if (item.address.subdistrict) { %><%= item.address.subdistrict %><% } %>" /><br><br>
+    <input type="text" id="subdistrict" name="sucdistrict" class="form-control" placeholder="e.g. Causeway Bay" value ="<% if (item.address.subdistrict) { %><%= item.address.subdistrict %><% } %>" /><br><br>
 
     <label for="building"><b>Building:</b></label>
-    <input type="text" id="building" name="building" class="form-control" placeholder="" value ="<% if (item.address.building) { %><%= item.address.building %><% } %>" /><br><br>
+    <input type="text" id="building" name="building" class="form-control" placeholder="e.g. Happy Mansion" value ="<% if (item.address.building) { %><%= item.address.building %><% } %>" /><br><br>
                 
     <label for="Shop Contact No."><b>Shop Contact No.:</b></label>
-    <input type="text" id="number" name="number" class="form-control" placeholder="" value ="<% if (item.phone) { %><%= item.phone %><% } %>"/> <br><br>
+    <input type="text" id="number" name="number" class="form-control" placeholder="e.g. 55554455" value ="<% if (item.phone) { %><%= item.phone %><% } %>"/> <br><br>
                 
     <label for="cheapitemscategory"><b>Cheap Items Category:</b></label>
-    <input type="text" id="category" name="category" class="form-control" placeholder="" value = "<% if (item.cheapitemscategory) { %><%= item.cheapitemscategory %><% } %>" /><br><br>
+    <input type="text" id="category" name="category" class="form-control" placeholder="e.g. Clothings" value = "<% if (item.cheapitemscategory) { %><%= item.cheapitemscategory %><% } %>" /><br><br>
                 
     <label for="description"><b>Description:</b></label><br>
-    <textarea name="description" cols="50" rows="10" placeholder="" value = "<% if (item.description) { %><%= item.description %><% } %>" /></textarea><br>
+    <textarea name="description" cols="50" rows="10" placeholder="Add more details..." value = "<% if (item.description) { %><%= item.description %><% } %>" /></textarea><br>
 
     <input type="submit" value="update">
 </html>
-
