@@ -309,7 +309,7 @@ app.post('/update', function(req, res){
 
                 var addressdoc ={};
                 addressdoc['subdistrict'] = req.body.subdistrict;
-                if(req.body.street){
+                if(req.body.building){
                     addressdoc['building'] = req.body.building;
                 }
                 updatedocument['address'] = addressdoc;
