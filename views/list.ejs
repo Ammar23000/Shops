@@ -1,6 +1,6 @@
 <html>
     <body>
-        <H2>(<%= nItems %>) shop(s) information has/have been found. There are (<%= nItems %>) cheap shops information below. </H2>
+        <H2>(<%= nItems %>) shop(s) information has/have been found. There are (<%= nItems %>) cheap shop IDs below. </H2>
         <ul>
             <% for (var i of items) { %>
             <li>Shop ID: <a href="/details?_id=<%= i._id %>"><%= i.shopID %></a></li>
