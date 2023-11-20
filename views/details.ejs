@@ -18,10 +18,10 @@
     <div class="row">
         <p>Shop ID:  <% if (typeof (item.shopID) !== "undefined") { %><%= item.shopID %><% } %></p><br>
         <p>Shop Name:  <% if (typeof (item.name) !== "undefined") { %><%= item.name %><% } %></p><br>
-        <p>Sub District:  <% if (typeof (item.address.Subdistrict) !== "undefined") { %><%= item.address.subdistrict %><% } %></p><br>
+        <p>Sub District:  <% if (typeof (item.address.subdistrict) !== "undefined") { %><%= item.address.subdistrict %><% } %></p><br>
         <p>Building:  <% if (typeof (item.address.building) !== "undefined") { %><%= item.address.building %><% } %></p><br>
         <p>Restaurant Contact No.:  <% if (typeof (item.phone) !== "undefined") { %><%= item.phone %><% } %></p><br>
-        <p>Cheap Items Category:  <% if (typeof (item.category) !== "undefined") { %><%= item.category %><% } %></p><br>
+        <p>Cheap Items Category:  <% if (typeof (item.cheapitemscategory) !== "undefined") { %><%= item.cheapitemscategory %><% } %></p><br>
         <p>Description:  <% if (typeof (item.description) !== "undefined") { %><%= item.description %><% } %></p><br>
     </div>
         <a href="/edit?_id=<%= item._id %>" >Update the information</a><br><br>
