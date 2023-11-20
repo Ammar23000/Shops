@@ -18,7 +18,7 @@ As each user has a userID and a password to login to his account and get access 
 	{userid: userA, password: am123},
 	{userid: userB, password: am123},
 	{userid: userC, password: am123},
-	{suerid: userD, password: am123}
+	{userid: userD, password: am123}
 ]
 
 When the user has successfully login into the appplication, the userid will automatically be stored in the session.
