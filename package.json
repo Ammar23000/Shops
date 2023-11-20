@@ -7,12 +7,12 @@
         "node": "^14.15.1"
     },
     "dependencies": {
+        "assert": "^1.4.1",
+        "body-parser": "^1.20.2",
         "cookie-session": "latest",
-        "body-parser": "^1.18.3",
         "ejs": "*",
-        "express": "*",
-        "mongodb": "3.6.5",
-        "assert": "^1.4.1"
+        "express": "^4.18.2",
+        "mongodb": "3.6.5"
     },
     "engine": "node >= 12.0.0",
     "scripts": {
