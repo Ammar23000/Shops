@@ -18,21 +18,21 @@
     </div>
     <form action="/create" method="POST">
         <label for='name'><b>Shop Name*:</b></label><br>
-        <input type="text" id="name" name="name" placeholder=""><br><br>
+        <input type="text" id="name" name="name" placeholder="Please input shop name"><br><br>
         <label for='shopID'><b>Shop ID*:</b></label><br>
-        <input type="text" id="shopID" name="shopID" placeholder="" pattern="[0-9]{8}"><br>
-        <small>Format: XXXXXXXX (Only numbers)</small><br><br>
+        <input type="text" id="shopID" name="shopID" placeholder="Input shopID" pattern="[0-9]{8}"><br>
+        <small>Format: 12345678 (Only input numbers)</small><br><br>
         <label for='SubDistrict'><b>Sub District:</b></label><br>
-        <input type="text" id="SubDistrict" name="SubDistrict" placeholder=""><br><br>
+        <input type="text" id="SubDistrict" name="SubDistrict" placeholder="e.g. Sham Shui Po"><br><br>
         <label for='buildingname'><b>Building Name:</b></label><br>
-        <input type="text" id="building" name="building" placeholder=""><br><br>
+        <input type="text" id="building" name="building" placeholder="e.g. Da Sing Mansion"><br><br>
         <label for='shopcontactno.'><b>Shop Contact No.:</b></label><br>
-        <input type="text" id="number" name="number" placeholder="" pattern="[0-9]{8}"><br>
+        <input type="text" id="number" name="number" placeholder="Telephone number of shop" pattern="[0-9]{8}"><br>
         <small>Format: 68765432</small><br><br>
         <label for='cheapitemscategory'><b>Cheap Items Category:</b></label><br>
-        <input type="text" id="cheapitemscategory" name="cheapitemscategory" placeholder=""><br><br>
+        <input type="text" id="cheapitemscategory" name="cheapitemscategory" placeholder="e.g. Vegetables"><br><br>
         <label for='description'><b>Description:</b></label><br>
-        <textarea name="description" id="description" cols="50" rows="10" placeholder="Type your comments..."></textarea><br>
+        <textarea name="description" id="description" cols="50" rows="10" placeholder="Add more details..."></textarea><br>
         </p>
         <input type="submit" value="Create" /> 
     </form>    
